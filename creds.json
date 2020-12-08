@@ -1,0 +1,7 @@
+{
+	"comment" : "Rename this file to credentials.json, add your relevant data",
+	"host": "washington.uww.edu",
+	"user": "",
+	"password": "",
+	"database": ""
+}
