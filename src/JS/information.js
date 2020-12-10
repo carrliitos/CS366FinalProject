@@ -61,9 +61,9 @@ universities = [
 	}
 ]
 
-displayUniversity();
+displayInformation();
 
-function displayUniversity() {
+function displayInformation() {
 	let universityInfo = "";
 	universities.forEach((university) => {
 		universityInfo += createUniversityInfo(university)
