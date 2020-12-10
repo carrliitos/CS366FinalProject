@@ -22,6 +22,42 @@ universities = [
 		desc: "2-year",
 		type: "Public",
 		state: "WI"
+	},
+	{
+		name: "University of Wisconsin - Rock County",
+		desc: "2-year",
+		type: "Public",
+		state: "WI"
+	},
+	{
+		name: "University of Wisconsin - Marathon County",
+		desc: "2-year",
+		type: "Public",
+		state: "WI"
+	},
+	{
+		name: "Blackhawk Technical College",
+		desc: "2-year",
+		type: "Public - Technical",
+		state: "WI"
+	},
+	{
+		name: "Alverno College",
+		desc: "4-year",
+		type: "Private",
+		state: "WI"
+	},
+	{
+		name: "Marquette University",
+		desc: "4-year",
+		type: "Private",
+		state: "WI"
+	},
+	{
+		name: "Mount Mary University",
+		desc: "4-year",
+		type: "Private",
+		state: "WI"
 	}
 ]
 
