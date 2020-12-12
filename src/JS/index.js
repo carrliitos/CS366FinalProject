@@ -1,3 +1,6 @@
+const { response } = require("express");
+const { createConnection } = require("mysql");
+
 function dropdown() {
 	document.getElementById("myDropdown").classList.toggle("show");
 	console.log("Hello!");
@@ -16,3 +19,27 @@ window.onclick = function(event) {
 		}
 	}
 }
+
+app.get("", (req, res) =>{
+	var schoolID = req.params.id;
+		db.query("CALL getSchoolInformation(?)", [schoolID], (error, result, fields) => {
+				if(error){
+					throw error;
+				}else{
+					response.mysql(result);
+				}
+		});
+});
+
+
+
+
+app.get("", (req, res) =>{
+	db.query("CALL getTuitionCost(?)", [], (error, result, fields) => {
+			if(error){
+				throw error;
+			}else{
+				response.mysql(result);
+			}
+	});
+});
