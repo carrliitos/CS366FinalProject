@@ -1,8 +1,9 @@
-const express = require('express')
-const app = express();
+var express = require('express')
+var app = express();
+var Database = require('./src/JS/connection.js');
 
-const Databasse = require('./src/JS/connection.js')
+const port = 3000;
 
-app.listen('3000', () => {
-	console.log("Server started on port 3000");
+app.listen(port, () => {
+	console.log("Server started on port " + port);
 });

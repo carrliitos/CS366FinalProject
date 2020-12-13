@@ -2,7 +2,7 @@ const mysql = require('mysql')
 const credentials = require('../../credentials.json')
 
 // creating connection
-const db = mysql.createConnection({
+const con = mysql.createConnection({
 	host : credentials.host,
 	user : credentials.user,
 	password : credentials.password,
@@ -10,9 +10,16 @@ const db = mysql.createConnection({
 });
 
 // connect
-db.connect((err) => {
+con.connect((err) => {
 	if(err) {
 		console.log("Error on connection")
+		return;
 	}
-	console.log("MySQL connected!");
+	console.log("Connection established.");
+});
+
+con.end((err) => {
+	// The connection is terminated
+	// Ensures all remaining queries are executed
+	// Then sends a quit packet to the MySQL server.
 });
