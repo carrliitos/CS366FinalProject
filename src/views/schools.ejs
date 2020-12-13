@@ -1,0 +1,31 @@
+<% include ('layouts/header.ejs') %>
+	<div class="table-wrapper">
+
+		<% if (schools.length > 0) { %>
+			<table class="table table-hovered">
+				<thead class="thead-dark">
+					<tr>
+						<td>School Name</td>
+						<td>School Type</td>
+						<td>Degree Length</td>
+						<td>School State</td>
+					</tr>
+				</thead>
+				<tbody>
+					<% schools.forEach((schools, index) => { %>
+						<tr>
+							<td><%= schools.School_Name %></td>
+							<td><%= schools.School_Type %></td>
+							<td><%= schools.Degree_length %></td>
+							<td><%= schools.State_code %></td>
+						</tr>
+					<% }) %>
+				</tbody>
+			</table>
+		<% } else { %>
+			<p class="text-center">No schools found.</p>
+		<% } %>
+	</div>
+</div>
+</body>
+</html>
