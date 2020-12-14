@@ -19,14 +19,14 @@ controller.getHomePage = (req, res) => {
 };
 
 controller.getEntryLevelPay = (req, res) => {
-	let query = "SELECT name, early_career_pay FROM salary_potential WHERE early_career_pay <= 40000 ORDER BY name";
+	let query = "SELECT name, early_career_pay FROM salary_potential WHERE early_career_pay <= 40000 ORDER BY 'name'";
 
 	db.query(query, (err, result) => {
 		if(err) {
 			console.log("Error executing query: ", err);
 			res.redirect('/');
 		}else {
-			res.render('entryLevelPay.ejs', {
+			res.render('entryLevel.ejs', {
 				title: "Entry level pay from colleges",
 				schools: result
 			});

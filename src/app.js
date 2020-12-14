@@ -40,7 +40,7 @@ app.use(express.static(path.join(__dirname, 'public'))); // configure express to
 app.use(fileUpload()); // configure fileupload
 
 // App routes
-// app.use('/', homeRoutes);
+app.use('/', homeRoutes);
 app.use('/entryLevel', homeRoutes); // testing
 // app.use('/schools', schoolRoutes.list);
 app.get('*', function(req, res, next){
