@@ -35,7 +35,7 @@ controller.getEntryLevelPay = (req, res) => {
 };
 
 controller.getWomenDiversity = (req, res) => {
-	let query = "SELECT name, state, enrollment FROM diversity_school WHERE category LIKE ‘woman’";
+	let query = "SELECT name, state, total_enrollment FROM Diversity_School WHERE category LIKE ‘woman’";
 
 	db.query(query, (err, result) => {
 		if(err) {
