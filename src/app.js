@@ -7,7 +7,7 @@ const path = require('path');
 const app = express();
 
 // load routes
-const schoolRoutes = require('./routes/schools.routes');
+// const schoolRoutes = require('./routes/schools.routes');
 const homeRoutes = require('./routes/index.routes');
 const port = 3000;
 
@@ -41,7 +41,7 @@ app.use(fileUpload()); // configure fileupload
 
 // App routes
 app.use('/', homeRoutes);
-app.use('/schools', schoolRoutes.list);
+// app.use('/schools', schoolRoutes.list);
 app.get('*', function(req, res, next){
 	res.status(404);
 	res.render('404.ejs', {
