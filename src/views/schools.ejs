@@ -1,6 +1,5 @@
 <% include ('layouts/header.ejs') %>
 	<div class="table-wrapper">
-
 		<% if (schools.length > 0) { %>
 			<table class="table table-hovered">
 				<thead class="thead-dark">
@@ -14,10 +13,10 @@
 				<tbody>
 					<% schools.forEach((schools, index) => { %>
 						<tr>
-							<td><%= schools.School_Name %></td>
-							<td><%= schools.School_Type %></td>
-							<td><%= schools.Degree_length %></td>
-							<td><%= schools.State_code %></td>
+							<td><%=schools.School_Name %></td>
+							<td><%=schools.School_Type %></td>
+							<td><%=schools.Degree_length %></td>
+							<td><%=schools.State_code %></td>
 						</tr>
 					<% }) %>
 				</tbody>
