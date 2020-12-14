@@ -41,8 +41,7 @@ app.use(fileUpload()); // configure fileupload
 
 // App routes
 app.use('/', homeRoutes);
-app.use('/entryLevel', homeRoutes); // testing
-// app.use('/schools', schoolRoutes.list);
+
 app.get('*', function(req, res, next){
 	res.status(404);
 	res.render('404.ejs', {

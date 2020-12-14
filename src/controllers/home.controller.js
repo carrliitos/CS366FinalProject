@@ -19,7 +19,7 @@ controller.getHomePage = (req, res) => {
 };
 
 controller.getEntryLevelPay = (req, res) => {
-	let query = "SELECT name, early_career_pay FROM salary_potential WHERE early_career_pay <= 40000 ORDER BY 'name'";
+	let query = "SELECT name, early_career_pay FROM `salary_potential` WHERE early_career_pay <= 40000 ORDER BY `salary_potential`.`early_career_pay` DESC ";
 
 	db.query(query, (err, result) => {
 		if(err) {
@@ -35,7 +35,7 @@ controller.getEntryLevelPay = (req, res) => {
 };
 
 controller.getWomenDiversity = (req, res) => {
-	let query = "SELECT name, state, total_enrollment FROM Diversity_School WHERE category LIKE ‘woman’";
+	let query = "SELECT DISTINCT name, total_enrollment FROM Diversity_School WHERE category LIKE 'Women' ORDER BY `Diversity_School`.`total_enrollment`  DESC";
 
 	db.query(query, (err, result) => {
 		if(err) {
