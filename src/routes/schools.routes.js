@@ -3,7 +3,7 @@ exports.list = function(req, res){
 		var query = connection.query('SELECT * FROM School', function(err, rows) {
 			if(err)
 					console.log("Error Selecting : %s ", err );
-			res.render('customers',{
+			res.render('schools',{
 				page_title: "Schools List", 
 				data: rows
 			});
